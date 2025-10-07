@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './ApplyHeading.module.css';
+import styles from '../styles/ApplyHeading.module.css';
 
 const ApplyHeading = ({ className = '', onClick }) => {
   return (
