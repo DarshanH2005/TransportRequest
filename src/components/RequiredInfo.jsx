@@ -4,8 +4,9 @@ import "../styles/RequiredInfo.css";
 import ClipboardIcon from '../assets/clipboard-new-24x24.svg';
 
 import VisaFormSection from './VisaFormSection';
+import RequestTypeSection from './RequestTypeSection';
 
-const RequiredInfo = ({ onClick, className = "" }) => {
+const RequiredInfo = ({ onClick, className = "", showDiscoverCheckbox = true, showTransportDetails = false, pageTitle = "" }) => {
   return (
     <div className={`required-info-rectangle ${className}`}> 
       <div className="required-info-header">
@@ -16,10 +17,17 @@ const RequiredInfo = ({ onClick, className = "" }) => {
             
           </span>
         </span>
+        
       </div>
       <div className="worklet-details-card">
         <div className="form-sections-container">
-          <VisaFormSection />
+          <RequestTypeSection />
+          <br />
+          <VisaFormSection 
+            showDiscoverCheckbox={showDiscoverCheckbox} 
+            showTransportDetails={showTransportDetails}
+            pageTitle={pageTitle}
+          />
           <br /><br />
           <div style={{ marginTop: 8 }}>
             

@@ -1,0 +1,47 @@
+/* RM/PM Approval Page - Specific Styles */
+
+/* Radio Button Styling for /3 route - Gray theme */
+/* Selected radio button - Dark gray */
+.rmpm-approval-page .radio-option input[type="radio"]:checked {
+  border-color: #838383 !important;
+  background-color: transparent !important;
+}
+
+.rmpm-approval-page .radio-option input[type="radio"]:checked::after {
+  background-color: #838383 !important;
+}
+
+/* Unselected radio buttons - Light gray with circle */
+.rmpm-approval-page .radio-option input[type="radio"]:not(:checked):not(:disabled) {
+  border-color: #D0D5DD !important;
+  background-color: transparent !important;
+  position: relative;
+}
+
+.rmpm-approval-page .radio-option input[type="radio"]:not(:checked):not(:disabled)::after {
+  content: '';
+  width: 11px;
+  height: 11px;
+  background-color: #D0D5DD !important;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Disabled radio buttons - Keep lighter */
+.rmpm-approval-page .radio-option input[type="radio"]:disabled {
+  border-color: #E5E7EB !important;
+  background-color: #F9FAFB !important;
+  opacity: 0.5;
+}
+
+/* Radio label text color */
+.rmpm-approval-page .radio-option .radio-label {
+  color: #6B7280 !important;
+}
+
+.rmpm-approval-page .radio-option input[type="radio"]:checked ~ .radio-label {
+  color: #111827 !important;
+}

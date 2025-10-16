@@ -1,0 +1,97 @@
+/* Approval Buttons Container */
+.approval-buttons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+/* Approval Button - Filled Blue */
+.approval-button {
+  width: 90px;
+  height: 38px;
+  padding: 12px;
+  background: #38aee0;
+  border: 1px solid #38aee0;
+  border-radius: 4px;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.approval-button:hover:not(:disabled) {
+  background: #2d98c8;
+  border-color: #2d98c8;
+}
+
+.approval-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.approval-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #9ca3af;
+  border-color: #9ca3af;
+}
+
+/* Reject Button - Outlined */
+.reject-button {
+  width: 63px;
+  height: 38px;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #38aee0;
+  border-radius: 4px;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  color: #38aee0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  white-space: nowrap;
+}
+
+.reject-button:hover:not(:disabled) {
+  background: #38aee0;
+  color: #ffffff;
+}
+
+.reject-button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+.reject-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  border-color: #d0d5dd;
+  color: #9ca3af;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .approval-buttons-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .approval-button,
+  .reject-button {
+    width: 100%;
+  }
+}

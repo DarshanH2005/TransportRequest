@@ -1,0 +1,265 @@
+/* Transport Details Container */
+.employee-container .transport-details-container {
+  background: transparent;
+  padding: 0;
+  width: 100%;
+  margin: 24px 0 0 0;
+}
+
+/* Section Label - Samsung InterFace Bold 16px #101928 */
+.employee-container .transport-details-container .section-label {
+  font-family: 'Samsung InterFace', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.45;
+  color: #101928;
+  margin-bottom: 18px;
+}
+
+/* Radio Buttons for Trip Type */
+.custom-radio-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 18px;
+}
+
+.custom-radio-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.custom-radio-option svg {
+  flex-shrink: 0;
+}
+
+/* Trip Type Label - Samsung InterFace Regular 14px #6e6e6e (unselected) */
+.trip-type-label {
+  font-size: 14px;
+  font-weight: 400;
+  color: #6e6e6e;
+  font-family: 'Samsung InterFace', sans-serif;
+  line-height: 1.45;
+}
+
+/* Selected Trip Type Label - Bold #838383 */
+.trip-type-label.selected {
+  font-weight: 700;
+  color: #484848;
+}
+
+/* Transport Rows */
+.transport-row {
+  display: grid;
+  gap: 20px;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+/* Three Column Layout: Vendor Name | Trip Sheet No | Trip Schedule for */
+.transport-row-three-col {
+  gap: 23px;
+  grid-template-columns: 31.7% 31.7% auto;
+}
+
+/* Two Column Layout: Vehicle Model | Vehicle No */
+.transport-row-two-col {
+  gap: 23px;
+  grid-template-columns: 31.7% 31.7% auto;
+}
+
+/* Transport Field */
+.transport-field {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Input Labels - Samsung InterFace Bold 14px #202224 */
+.employee-container .transport-details-container .input-label {
+  font-family: 'Samsung InterFace', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #202224;
+  letter-spacing: 0.21px;
+  margin-bottom: 7px;
+}
+
+/* Required Star */
+.required-star {
+  color: #ef3826;
+}
+
+/* Input Base - White background, border, Samsung InterFace Regular 14px #111827 */
+.employee-container .transport-details-container .transport-field .input-base {
+  background: #ffffff !important;
+  border: 1px solid #D0D5DD !important;
+  border-radius: 8px !important;
+  height: 48px !important;
+  padding: 12px 16px !important;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #111827 !important;
+  letter-spacing: 0.21px !important;
+  box-sizing: border-box !important;
+}
+
+.employee-container .transport-details-container .transport-field .input-base input {
+  padding: 0 !important;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+  color: #111827 !important;
+  letter-spacing: 0.21px !important;
+}
+
+.employee-container .transport-details-container .transport-field .input-base::placeholder {
+  color: #9CA3AF !important;
+  opacity: 1 !important;
+}
+
+/* Trip Schedule Inputs Container */
+.trip-schedule-inputs {
+  display: flex;
+  gap: 1px;
+  width: 100%;
+}
+
+/* Date Picker - 192px width, rounded corners */
+.employee-container .transport-details-container .trip-date-input {
+  width: 192px !important;
+  min-width: 192px !important;
+  max-width: 192px !important;
+  margin-right: 2px !important;
+}
+
+.employee-container .transport-details-container .trip-date-input .MuiPickersOutlinedInput-root,
+.employee-container .transport-details-container .trip-date-input .MuiPickersInputBase-root,
+.employee-container .transport-details-container .trip-date-input .MuiOutlinedInput-root {
+  background: #ffffff !important;
+  row-gap: 2px;
+  border: 1px solid #D0D5DD !important;
+  border-radius: 4px 1px 1px 4px !important;
+  height: 50px !important;
+  min-height: 40px !important;
+  max-height: 48px !important;
+  padding: 10px !important;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: #111827 !important;
+  box-sizing: border-box !important;
+}
+
+.employee-container .transport-details-container .trip-date-input .MuiPickersOutlinedInput-notchedOutline,
+.employee-container .transport-details-container .trip-date-input .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+.employee-container .transport-details-container .trip-date-input .MuiPickersInputBase-input,
+.employee-container .transport-details-container .trip-date-input .MuiInputBase-input {
+  padding: 16px 16px !important;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: #111827 !important;
+}
+
+/* Time Picker - 216px width, rounded corners */
+.employee-container .transport-details-container .trip-time-input {
+  width: 216px !important;
+  min-width: 216px !important;
+  max-width: 216px !important;
+}
+
+.employee-container .transport-details-container .trip-time-input .MuiPickersOutlinedInput-root,
+.employee-container .transport-details-container .trip-time-input .MuiPickersInputBase-root,
+.employee-container .transport-details-container .trip-time-input .MuiOutlinedInput-root {
+  background: #ffffff !important;
+  border: 1px solid #D0D5DD !important;
+  border-radius: 1px 4px 4px 1px !important;
+  height: 50px !important;
+  min-height: 40px !important;
+  max-height: 48px !important;
+  padding: 10px !important;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif !important;
+  font-size: 14px !important;
+  color: #111827 !important;
+  box-sizing: border-box !important;
+}
+
+.employee-container .transport-details-container .trip-time-input .MuiPickersOutlinedInput-notchedOutline,
+.employee-container .transport-details-container .trip-time-input .MuiOutlinedInput-notchedOutline {
+  border: none !important;
+}
+
+.employee-container .transport-details-container .trip-time-input .MuiPickersInputBase-input,
+.employee-container .transport-details-container .trip-time-input .MuiInputBase-input {
+  padding: 9px 16px !important;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif !important;
+  font-weight: 400 !important;
+  font-size: 14px !important;
+  line-height: 22px !important;
+  color: #111827 !important;
+}
+
+/* Calendar and Clock Icons */
+.calendar-icon {
+  width: 20px !important;
+  height: 18px !important;
+ 
+  margin-left: 8px;
+}
+
+/* Calendar Icon (Date Picker) - Larger */
+.trip-date-input .calendar-icon {
+  width: 24px !important;
+  height: 24px !important;
+}
+
+/* Clock Icon (Time Picker) - Keep Current Size */
+.trip-time-input .calendar-icon {
+  width: 20px !important;
+  height: 18px !important;
+}
+
+/* Disabled State */
+.employee-container .transport-details-container .transport-field .input-base.Mui-disabled {
+  background: #F9FAFB !important;
+  color: #6B7280 !important;
+  -webkit-text-fill-color: #6B7280 !important;
+}
+
+.employee-container .transport-details-container .trip-date-input .Mui-disabled .MuiPickersOutlinedInput-root,
+.employee-container .transport-details-container .trip-date-input .Mui-disabled .MuiOutlinedInput-root,
+.employee-container .transport-details-container .trip-time-input .Mui-disabled .MuiPickersOutlinedInput-root,
+.employee-container .transport-details-container .trip-time-input .Mui-disabled .MuiOutlinedInput-root {
+  background: #F9FAFB !important;
+}
+
+.employee-container .transport-details-container .trip-date-input .Mui-disabled .MuiPickersInputBase-input,
+.employee-container .transport-details-container .trip-date-input .Mui-disabled .MuiInputBase-input,
+.employee-container .transport-details-container .trip-time-input .Mui-disabled .MuiPickersInputBase-input,
+.employee-container .transport-details-container .trip-time-input .Mui-disabled .MuiInputBase-input {
+  color: #6B7280 !important;
+  -webkit-text-fill-color: #6B7280 !important;
+}
+
+/* Focus States */
+.employee-container .transport-details-container .transport-field .input-base:focus-within {
+  border-color: #38aee0 !important;
+}
+
+.employee-container .transport-details-container .trip-date-input .MuiPickersOutlinedInput-root:focus-within,
+.employee-container .transport-details-container .trip-date-input .MuiOutlinedInput-root:focus-within,
+.employee-container .transport-details-container .trip-time-input .MuiPickersOutlinedInput-root:focus-within,
+.employee-container .transport-details-container .trip-time-input .MuiOutlinedInput-root:focus-within {
+  border-color: #38aee0 !important;
+}

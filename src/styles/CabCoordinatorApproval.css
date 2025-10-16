@@ -1,0 +1,134 @@
+/* Cab Coordinator Approval Page - Specific Styles */
+/* Override ALL input backgrounds to #F3F3F3 for /4 route */
+/* EXCEPT: Project dropdown at top and Comment textarea - keep them white */
+
+/* Base Input Styling - Highest Priority */
+.cab-coordinator-page .employee-container .input-base,
+.cab-coordinator-page .employee-container .input-base input,
+.cab-coordinator-page .employee-container .MuiInputBase-root:not(.project-input):not(.comment-input),
+.cab-coordinator-page .employee-container .MuiInputBase-input:not(.comment-input *) {
+  background: #F3F3F3 !important;
+}
+
+/* Project Input at top - KEEP WHITE */
+.cab-coordinator-page .employee-container .project-input,
+.cab-coordinator-page .employee-container .project-input .MuiOutlinedInput-root,
+.cab-coordinator-page .employee-container .project-input .MuiInputBase-root,
+.cab-coordinator-page .employee-container .project-input .MuiSelect-select {
+  background: #ffffff !important;
+}
+
+/* Time Picker Input - Cab Timing */
+.cab-coordinator-page .employee-container .cab-timing-input,
+.cab-coordinator-page .employee-container .cab-timing-input .MuiInputBase-root,
+.cab-coordinator-page .employee-container .cab-timing-input .MuiOutlinedInput-root,
+.cab-coordinator-page .employee-container .cab-timing-input .MuiPickersOutlinedInput-root,
+.cab-coordinator-page .employee-container .cab-timing-input .MuiPickersInputBase-root,
+.cab-coordinator-page .employee-container .cab-timing-input .MuiInputBase-input,
+.cab-coordinator-page .employee-container .cab-timing-input .MuiOutlinedInput-input {
+  background: #F3F3F3 !important;
+}
+
+/* Select Dropdown - Main Area, Reporting Building */
+.cab-coordinator-page .employee-container .input-select,
+.cab-coordinator-page .employee-container .input-select .MuiOutlinedInput-root,
+.cab-coordinator-page .employee-container .input-select .MuiInputBase-root,
+.cab-coordinator-page .employee-container .input-select .MuiSelect-select {
+  background: #F3F3F3 !important;
+}
+
+/* Landmark Input */
+.cab-coordinator-page .employee-container .landmark-input,
+.cab-coordinator-page .employee-container .landmark-input .MuiInputBase-root {
+  background: #F3F3F3 !important;
+}
+
+/* Transport Details Inputs */
+.cab-coordinator-page .employee-container .transport-details-container .input-base,
+.cab-coordinator-page .employee-container .transport-details-container .MuiInputBase-root,
+.cab-coordinator-page .employee-container .transport-details-container .MuiInputBase-input,
+.cab-coordinator-page .employee-container .transport-details-container .transport-field .input-base {
+  background: #F3F3F3 !important;
+}
+
+/* Date Picker and Time Picker in Transport Details */
+.cab-coordinator-page .employee-container .transport-details-container .trip-date-input .MuiPickersOutlinedInput-root,
+.cab-coordinator-page .employee-container .transport-details-container .trip-date-input .MuiPickersInputBase-root,
+.cab-coordinator-page .employee-container .transport-details-container .trip-time-input .MuiPickersOutlinedInput-root,
+.cab-coordinator-page .employee-container .transport-details-container .trip-time-input .MuiPickersInputBase-root {
+  background: #F3F3F3 !important;
+}
+
+/* Textarea fields - Reason ONLY (exclude Comment) */
+.cab-coordinator-page .employee-container textarea:not(.comment-input *),
+.cab-coordinator-page .employee-container .MuiInputBase-multiline:not(.comment-input),
+.cab-coordinator-page .employee-container .MuiInputBase-inputMultiline:not(.comment-input *) {
+  background: #F3F3F3 !important;
+}
+
+/* Comment textarea - KEEP WHITE */
+.cab-coordinator-page .employee-container .comment-input,
+.cab-coordinator-page .employee-container .comment-input textarea,
+.cab-coordinator-page .employee-container .comment-input .MuiInputBase-inputMultiline {
+  background: #ffffff !important;
+}
+
+/* Redirect to PM - Project Select */
+.cab-coordinator-page .redirect-to-pm-container .project-select,
+.cab-coordinator-page .redirect-to-pm-container .project-select-wrapper select {
+  background: #F3F3F3 !important;
+}
+
+/* Catch-all for any missed inputs - EXCLUDE project-input and comment-input */
+.cab-coordinator-page input[type="text"]:not(.project-input *),
+.cab-coordinator-page input[type="tel"]:not(.project-input *),
+.cab-coordinator-page textarea:not(.comment-input *),
+.cab-coordinator-page select:not(.project-input *) {
+  background: #F3F3F3 !important;
+}
+
+/* Radio Button Styling for /4 route - Gray theme */
+/* Selected radio button - Dark gray */
+.cab-coordinator-page .radio-option input[type="radio"]:checked {
+  border-color: #838383 !important;
+  background-color: transparent !important;
+}
+
+.cab-coordinator-page .radio-option input[type="radio"]:checked::after {
+  background-color: #838383 !important;
+}
+
+/* Unselected radio buttons - Light gray with circle */
+.cab-coordinator-page .radio-option input[type="radio"]:not(:checked):not(:disabled) {
+  border-color: #D0D5DD !important;
+  background-color: transparent !important;
+  position: relative;
+}
+
+.cab-coordinator-page .radio-option input[type="radio"]:not(:checked):not(:disabled)::after {
+  content: '';
+  width: 11px;
+  height: 11px;
+  background-color: #D0D5DD !important;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Disabled radio buttons - Keep lighter */
+.cab-coordinator-page .radio-option input[type="radio"]:disabled {
+  border-color: #E5E7EB !important;
+  background-color: #F9FAFB !important;
+  opacity: 0.5;
+}
+
+/* Radio label text color */
+.cab-coordinator-page .radio-option .radio-label {
+  color: #6B7280 !important;
+}
+
+.cab-coordinator-page .radio-option input[type="radio"]:checked ~ .radio-label {
+  color: #111827 !important;
+}

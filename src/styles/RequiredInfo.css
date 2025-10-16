@@ -934,3 +934,26 @@ label.section-label {
 .search-icon-right:hover {
   opacity: 0.8;
 }
+
+/* Note section in Required Info header */
+.required-info-note-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
+}
+
+.required-info-note-icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.required-info-note-text {
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif;
+  font-size: 11px;
+  color: #667085;
+  font-weight: 500;
+  line-height: 1;
+}

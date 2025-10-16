@@ -11,7 +11,19 @@ const Home = () => {
 
       <div className="home-actions">
         <button className="home-button primary" onClick={() => navigate('/1')}>
-          Create transport request
+         Employee Request 1
+        </button>
+        <button className="home-button primary" onClick={() => navigate('/2')}>
+         Employee Request 2
+        </button>
+        <button className="home-button primary" onClick={() => navigate('/3')}>
+         RM/PM Approval
+        </button>
+        <button className="home-button primary" onClick={() => navigate('/4')}>
+         Cab Coordinator Approval
+        </button>
+        <button className="home-button primary" onClick={() => navigate('/5')}>
+         Transport Report
         </button>
       </div>
     </div>

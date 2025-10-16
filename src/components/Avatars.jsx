@@ -5,7 +5,7 @@ import EmployeeProfile from './EmployeeProfile';
 import RequiredInfo from './RequiredInfo';
 
 
-const Avatars = () => {
+const Avatars = ({ showDiscoverCheckbox = true, showTransportDetails = false, pageTitle = "Transport Request-Emplyoee Request" }) => {
 	const employeeData = {
 		initials: "MK",
 		name: "Manoj Kandan M",
@@ -21,14 +21,18 @@ const Avatars = () => {
 		<div className="avatars-container">
 			<Header
 				breadcrumb="My Workspace > Transport Request"
-				title="Transport Request-Emplyoee Request"
+				title={pageTitle}
 			/>
 
 			<EmployeeProfile
 				employee={employeeData}
 			/>
 
-			<RequiredInfo />
+			<RequiredInfo 
+				showDiscoverCheckbox={showDiscoverCheckbox} 
+				showTransportDetails={showTransportDetails}
+				pageTitle={pageTitle}
+			/>
 
 			
 		</div>
