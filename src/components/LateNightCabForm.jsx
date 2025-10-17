@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import {
   Box,
-  Button,
   InputBase,
   Select,
   MenuItem,
@@ -20,6 +19,8 @@ import TransportDetails from "./TransportDetails";
 import DriverDetails from "./DriverDetails";
 import RedirectToPM from "./RedirectToPM";
 import ApprovalButtons from "./ApprovalButtons";
+import SubmitButton from "./SubmitButton";
+import TransferWorkflow from "./TransferWorkflow";
 
 // Custom dropdown icon
 const CustomDropdownIcon = () => (
@@ -61,6 +62,7 @@ const LateNightCabForm = ({ onSubmit, showDiscoverCheckbox = true, showTransport
   // Check if this is Cab Coordinator or Transport Report page
   const isCabCoordinatorPage = pageTitle === "Cab Coordinator Approval";
   const isTransportReportPage = pageTitle === "Transport Report";
+  const isRMPMApprovalPage = pageTitle === "RM/PM Approval";
 
   const handleMobileCheckbox = (e) => setIsMobileDifferent(e.target.checked);
 
@@ -102,6 +104,12 @@ const LateNightCabForm = ({ onSubmit, showDiscoverCheckbox = true, showTransport
     alert(`Workflow transferred to PM for project: ${projectValue}`);
   };
 
+  const handleTransferWorkflowClick = () => {
+    console.log('Transfer Workflow clicked');
+    // Add your transfer workflow logic here
+    alert('Transfer Workflow initiated');
+  };
+
   const handleApprove = () => {
     console.log('Request approved');
     setSnackbarOpen(true);
@@ -123,32 +131,38 @@ const LateNightCabForm = ({ onSubmit, showDiscoverCheckbox = true, showTransport
   };
 
   return (
+    
     <LocalizationProvider dateAdapter={AdapterDateFns}>
       <Box className="employee-container">
         {/* Project Details */}
         <Box className="form-section">
-          <div className="section-label">Project Details</div>
           <br />
+          <div className="section-label">Project Details</div>
+        
           <div className="input-label">Project</div>
-          <Select
-            value={project}
-            onChange={(e) => setProject(e.target.value)}
-            className="project-input"
-            IconComponent={CustomDropdownIcon}
-          >
-            {projectList.map((p) => (
-              <MenuItem key={p} value={p}>
-                {p}
-              </MenuItem>
-            ))}
-          </Select>
+          <div className="project-input-wrapper">
+            <select
+              value={project}
+              onChange={(e) => setProject(e.target.value)}
+              className="project-input project-select"
+            >
+              {projectList.map((p) => (
+                <option key={p} value={p}>
+                  {p}
+                </option>
+              ))}
+            </select>
+            <svg className="project-dropdown-icon" width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.266 1.15967L7.63789 7.78779L1.00977 1.15967" stroke="#202224" strokeWidth="1.89375" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+          </div>
         </Box>
         <br />
 
         {/* Booking Details */}
         <Box className="form-section">
           <div className="section-label">Booking Details</div>
-          <br />
+         
           <div className="booking-details-row">
             {/* Cab Timing for Late Night */}
             <div className="booking-col">
@@ -217,11 +231,12 @@ const LateNightCabForm = ({ onSubmit, showDiscoverCheckbox = true, showTransport
             </div>
           </div>
         </Box>
+        <br />
 
         {/* Contact Details */}
         <Box className="form-section">
           <div className="section-label">Contact Details</div>
-          <br />
+          
           <div className="contact-details-row">
             <div className="booking-col">
               <label className="input-label">Extension No</label>
@@ -259,8 +274,8 @@ const LateNightCabForm = ({ onSubmit, showDiscoverCheckbox = true, showTransport
         {/* Transport Details Section */}
         {showTransportDetails && <TransportDetails isEditable={true} />}
 
-        {/* Driver Details Section */}
-        {showTransportDetails && <DriverDetails isEditable={true} />}
+        {/* Driver Details Section - Show only for Transport Report page */}
+        {showTransportDetails && isTransportReportPage && <DriverDetails isEditable={true} />}
 
         {/* Redirect to PM Section - Hide for Cab Coordinator and Transport Report */}
         {showTransportDetails && !isCabCoordinatorPage && !isTransportReportPage && (
@@ -310,18 +325,22 @@ const LateNightCabForm = ({ onSubmit, showDiscoverCheckbox = true, showTransport
 
         {/* Submit Button or Approval Buttons based on route */}
         {showTransportDetails && !isTransportReportPage ? (
-          <ApprovalButtons
-            onApprove={handleApprove}
-            onReject={handleReject}
-          />
+          <>
+            <ApprovalButtons
+              onApprove={handleApprove}
+              onReject={handleReject}
+            />
+            {/* Transfer Workflow - Show only for /3 (RM/PM Approval) and /4 (Cab Coordinator) routes */}
+            {(isRMPMApprovalPage || isCabCoordinatorPage) && (
+              <TransferWorkflow onClick={handleTransferWorkflowClick} />
+            )}
+          </>
         ) : showTransportDetails && isTransportReportPage ? (
           // No buttons for Transport Report page
           null
         ) : (
           <Box className="submit-btn-row">
-            <Button variant="contained" className="submit-btn" onClick={handleSubmit}>
-              Submit
-            </Button>
+            <SubmitButton onClick={handleSubmit} />
           </Box>
         )}
 

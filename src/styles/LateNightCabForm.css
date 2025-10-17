@@ -172,14 +172,14 @@
 }
 
 .form-section {
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .section-label {
   font-weight: 700;
   font-size: 16px;
   color: #111827;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   display: block;
   font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif;
 }
@@ -201,6 +201,49 @@
 }
 
 /* Project Input */
+.employee-container .project-input-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: inline-block;
+}
+
+.employee-container .project-select {
+  box-sizing: border-box;
+  width: 60%;
+  height: 48px;
+  background-color: #ffffff !important;
+  border: 1px solid #D0D5DD;
+  border-radius: 8px;
+  padding: 12px 16px;
+  padding-right: 10px;
+  font-size: 14px;
+  color: #111827;
+  font-family: 'Samsung InterFace', 'Segoe UI', Arial, sans-serif;
+  line-height: 1.5;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.employee-container .project-select:focus {
+  border-color: #2F80ED;
+  outline: none;
+}
+
+.employee-container .project-dropdown-icon {
+  position: absolute;
+  right: calc(36% );
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  width: 16px;
+  height: 9px;
+}
+
+/* Legacy support for old MUI classes */
 .employee-container .project-input {
   box-sizing: border-box;
   width: 65%;

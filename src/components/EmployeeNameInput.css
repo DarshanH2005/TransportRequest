@@ -329,7 +329,7 @@
 }
 
 .employee-note-tooltip-close-btn {
-  background: #40C4FF;
+  background: transparent;
   border: none;
   cursor: pointer;
   padding: 0;
@@ -338,19 +338,16 @@
   justify-content: center;
   width: 24px;
   height: 24px;
-  border-radius: 50%;
-  transition: background-color 0.2s;
+  transition: opacity 0.2s;
 }
 
 .employee-note-tooltip-close-btn:hover {
-  background-color: #29B6F6;
+  opacity: 0.8;
 }
 
-.employee-note-tooltip-close-icon {
-  width: 12px;
-  height: 12px;
-  filter: brightness(0) invert(1);
-  opacity: 1;
+.employee-note-tooltip-close-btn svg {
+  width: 16px;
+  height: 16px;
 }
 
 .employee-note-tooltip-list {
@@ -365,6 +362,15 @@
   line-height: 1.4;
   color: #606060;
   margin-bottom: 8px;
+}
+
+/* Blue styling for Transport Report page (/5 route) */
+.employee-note-tooltip.transport-report-note .employee-note-tooltip-list li {
+  color: #2F80ED;
+}
+
+.employee-note-tooltip.transport-report-note .employee-note-tooltip-list li::marker {
+  color: #2F80ED;
 }
 
 .employee-note-tooltip-list li b {

@@ -21,7 +21,7 @@ const RequiredInfo = ({ onClick, className = "", showDiscoverCheckbox = true, sh
       </div>
       <div className="worklet-details-card">
         <div className="form-sections-container">
-          <RequestTypeSection />
+          <RequestTypeSection pageTitle={pageTitle} />
           <br />
           <VisaFormSection 
             showDiscoverCheckbox={showDiscoverCheckbox} 

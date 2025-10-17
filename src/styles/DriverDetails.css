@@ -237,8 +237,8 @@
 /* Open KM Input */
 .employee-container .driver-details-container .driver-field.km-warnings-field .open-km-input-wrapper .input-base {
   width: 100%;
-  border-radius: 4px 1px 1px 4px !important;
-  border-right: none !important;
+  border-radius: 4px 0 0 4px !important;
+  border-right: 0.5px solid #D0D5DD !important;
 }
 
 .open-km-input {
@@ -248,7 +248,8 @@
 /* Warnings Input */
 .employee-container .driver-details-container .driver-field.km-warnings-field .warnings-input-wrapper .input-base {
   width: 100%;
-  border-radius: 1px 4px 4px 1px !important;
+  border-radius: 0 4px 4px 0 !important;
+  border-left: 0.5px solid #D0D5DD !important;
 }
 
 .warnings-input {
